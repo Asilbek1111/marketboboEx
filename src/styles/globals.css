@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto"),
+    url("../utils/Fonts/Roboto-Regular.9429985.woff2") format("woff2");
+}
+
+body {
+  font-family: "Roboto";
+}
+
+::-webkit-calendar-picker-indicator::after {
+  content: "";
+  display: block;
+  background: url("../../public/assets/svg/date-icon.svg") no-repeat;
+  background-size: 10%;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  transform: translateX(-2%);
+}
+
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  color: rgba(0, 0, 0, 0);
+  /* opacity: 1; */
+  background: url("../../public/assets/svg/date-icon.svg") no-repeat;
+  width: 12px;
+  height: 12px;
+  border-width: thin;
+}
+.styled-select {
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /* Safari and Chrome */
+  appearance: none;
+  background: url("../../public/assets/svg/down.svg") 96% 50% no-repeat;
+  background-color: #f5f6fa;
+}
+.styled-select-status {
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /* Safari and Chrome */
+  appearance: none;
+  background: url("../../public/assets/svg/down-black.svg") 100% 50% no-repeat;
+}
+
+.styled-select-dropdown {
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /* Safari and Chrome */
+  appearance: none;
+  background: url("../../public/assets/svg/down-black.svg") 85% 55% no-repeat;
+  background-color: #f5f6fa;
+  font-size: 12px;
+}
+
+.baseitem:last-child {
+  margin-right: 0;
+}
+
+.mySwiper{
+  padding: 0 10rem;
+}
+.swiper-button-prev {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%234c71ae'%2F%3E%3C%2Fsvg%3E") !important;
+}
+
+.swiper-button-next {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%234c71ae'%2F%3E%3C%2Fsvg%3E") !important;
+}
+
+
