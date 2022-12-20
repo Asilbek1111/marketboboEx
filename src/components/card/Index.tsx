@@ -3,17 +3,12 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper";
 import Image from "next/image";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+
 import { categories, logos, phones } from "../../utils/consts";
-import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
-import "@splidejs/react-splide/css";
-import "@splidejs/react-splide/css/skyblue";
-import "@splidejs/react-splide/css/sea-green";
+
 import { FreeMode } from "swiper";
 // or only core styles
-import "@splidejs/react-splide/css/core";
-import Ex from "../../ex/ex";
+
 
 function Card() {
   return (
