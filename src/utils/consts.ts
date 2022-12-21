@@ -151,6 +151,21 @@ const phones = [
     title: "Смартфон Vivo V25 8/256Gb Қора",
     price: "5 646 000 сўм",
   },
+  {
+    url: "https://texnomart.uz/_ipx/f_webp/https://backend.texnomart.uz/images/gallery/product/101271/31675/preview.jpg",
+    title: "Смартфон Vivo V25 8/256Gb Қора",
+    price: "5 646 000 сўм",
+  },
+  {
+    url: "https://texnomart.uz/_ipx/f_webp/https://backend.texnomart.uz/images/gallery/product/101271/31675/preview.jpg",
+    title: "Смартфон Vivo V25 8/256Gb Қора",
+    price: "5 646 000 сўм",
+  },
+  {
+    url: "https://texnomart.uz/_ipx/f_webp/https://backend.texnomart.uz/images/gallery/product/101271/31675/preview.jpg",
+    title: "Смартфон Vivo V25 8/256Gb Қора",
+    price: "5 646 000 сўм",
+  },
 ];
 export {
   categories,

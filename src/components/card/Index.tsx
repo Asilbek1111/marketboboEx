@@ -3,12 +3,16 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper";
 import Image from "next/image";
-
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 import { categories, logos, phones } from "../../utils/consts";
-
+import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
+import "@splidejs/react-splide/css";
+import "@splidejs/react-splide/css/skyblue";
+import "@splidejs/react-splide/css/sea-green";
 import { FreeMode } from "swiper";
 // or only core styles
-
+import "@splidejs/react-splide/css/core";
 
 function Card() {
   return (
@@ -24,7 +28,7 @@ function Card() {
               slidesPerView: 1,
             },
             300: {
-              slidesPerView: 4,
+              slidesPerView: 2,
             },
             768: {
               slidesPerView: 6,
@@ -32,12 +36,18 @@ function Card() {
           }}
         >
           {logos?.map((e, i) => (
-            <SwiperSlide>
+            <SwiperSlide key={i}>
               <a
                 className="tel:px-[10px] lg:px-[40px]  rounded-xl shadow-[0_1.17143px_14.0571px_rgba(0,0,0,0.06)]  w-[80%] h-full  py-[16px] block"
                 href="#"
               >
-                <img src={e.url} alt="#" title="#" className="w-full h-full " />
+                <img
+                  src={e.url}
+                  alt="#"
+                  title="#"
+                 
+                  className="w-full h-full "
+                />
               </a>
             </SwiperSlide>
           ))}
@@ -56,7 +66,7 @@ function Card() {
               slidesPerView: 1,
             },
             300: {
-              slidesPerView: 4,
+              slidesPerView: 2,
             },
             768: {
               slidesPerView: 6,
@@ -64,12 +74,18 @@ function Card() {
           }}
         >
           {categories?.map((e, i) => (
-            <SwiperSlide>
+            <SwiperSlide key={i}>
               <a
                 href="#"
                 className="w-[80%] h-[78px] mt-8  py-[16px] lg:px-[24px] tel:px-[12px]  rounded-[12px] border-[1px] shadow-[0_1.17143px_14.0571px_rgba(0,0,0,0.06)] flex  items-center flex-wrap justify-center"
               >
-                <img src={e.url} alt="#" title="#" className="w-full h-full " />
+                <img
+                  src={e.url}
+                  alt="#"
+                  title="#"
+                  
+                  className="w-full h-full "
+                />
                 <p className="text-base text-center text-[#333] tel:text-[13px]">
                   {e.title}
                 </p>
@@ -106,13 +122,18 @@ function Card() {
           }}
         >
           {phones?.map((e, i) => (
-            <SwiperSlide>
-              <div className=" w-[190px] h-[330px]  mt-[30px] pt-[5px]  mb-[20px] flex flex-col justify-start items-center hover:border-3 hover:border-[#ededed] hover:rounded-md hover:shadow-xl transition duration-150 ease-out hover:ease-in ">
+            <SwiperSlide key={i}>
+              <div className=" w-[190px] h-[430px]  mt-[30px] pt-[5px]  mb-[20px] flex  flex-col justify-start items-center hover:border-3 hover:border-[#ededed] hover:rounded-md hover:shadow-xl transition duration-150 ease-out hover:ease-in ">
                 <span className="text-[#fbc100] bg-[#333] rounded text-sm py-1 px-1  relative right-16 top-2">
                   Зўр нарх
                 </span>
                 <a href="./index.html" className=" mb-[26px]">
-                  <img src={e.url} alt="#" title="phone" />
+                  <img
+                    src={e.url}
+                   
+                    alt="#"
+                    title="phone"
+                  />
                 </a>
                 <div className="flex flex-col justify-center items-start space-y-2">
                   <a href="./index.html block w-[206px] h-[40px] ">
@@ -155,6 +176,7 @@ function Card() {
                       src="https://texnomart.uz/_nuxt/img/like-default.103ba85.svg"
                       className="h-[30px] ml-2 "
                       alt="default"
+                     
                     />
                   </div>
                 </div>
