@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Downbar() {
   return (
-    <div className="z-50 downbar fixed bottom-0  w-full  text-white bg-black sm:text-[14px] text-[12px] lg:hidden">
+    <div className="z-50 downbar fixed bottom-0  w-full  text-white bg-[#333333] sm:text-[14px] text-[12px] lg:hidden">
       <div className="cont flex justify-between items-center py-1 sm:px-12 tel:px-5">
         <div className="lcard flex flex-col justify-center items-center">
           <img

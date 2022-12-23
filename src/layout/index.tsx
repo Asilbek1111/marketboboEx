@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import TopNav from "./topNav";
 import MiddleNav from "./middleNav";
 import TopNavRes from "./responsiveTopNav";
+import Footer from "../components/footer/Index";
 
 const Layout = ({ children }: any) => {
   return (
@@ -12,6 +13,7 @@ const Layout = ({ children }: any) => {
       <MiddleNav />
       
       {children}
+      <Footer />
     </>
   );
 };

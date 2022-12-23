@@ -167,6 +167,10 @@ const phones = [
     price: "5 646 000 сўм",
   },
 ];
+
+
+
+
 export {
   categories,
   statuses,

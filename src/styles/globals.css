@@ -70,3 +70,6 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 }
 
 
+.swiper-slide{
+  padding: 10px 10px;
+}

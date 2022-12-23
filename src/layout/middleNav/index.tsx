@@ -57,7 +57,7 @@ function MiddleNav() {
           hidden
           "
         />
-        <button className="bg-primary py-1 px-3 rounded-lg text-xl mr-4 ml-0">
+        <button className="bg-primary py-1 px-3 rounded-lg text-xl mr-4 ml-0 lg:hidden">
           &#9776;
         </button>
         <Search />

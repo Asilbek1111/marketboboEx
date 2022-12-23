@@ -20,7 +20,7 @@ function Search() {
       <input
         onChange={handleCancel}
         type="text"
-        className="border-primary border-2 rounded-md w-full h-full pl-[7rem] focus:border-primary active:border-primary enabled:border-primary outline-primary"
+        className="border-primary border-2 rounded-md w-full h-full lg:pl-[7rem] tel:pr-16 focus:border-primary active:border-primary enabled:border-primary outline-primary"
         ref={inpRef}
       />
       {show && (

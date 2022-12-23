@@ -17,18 +17,19 @@ import "@splidejs/react-splide/css/core";
 function Card() {
   return (
     <>
-      <div className="cont">
+      <div className="cont lg:px-[2rem]">
         <Swiper
           freeMode={true}
           grabCursor={true}
           modules={[FreeMode]}
           className="mySwiper"
+          spaceBetween={30}
           breakpoints={{
             0: {
               slidesPerView: 1,
             },
             300: {
-              slidesPerView: 2,
+              slidesPerView: 4,
             },
             768: {
               slidesPerView: 6,
@@ -38,16 +39,10 @@ function Card() {
           {logos?.map((e, i) => (
             <SwiperSlide key={i}>
               <a
-                className="tel:px-[10px] lg:px-[40px]  rounded-xl shadow-[0_1.17143px_14.0571px_rgba(0,0,0,0.06)]  w-[80%] h-full  py-[16px] block"
+                className="tel:px-[10px] lg:px-[40px]  rounded-xl shadow-[0_1.17143px_14.0571px_rgba(0,0,0,0.06)]  lg:w-[10rem] lg:h-full  py-[16px] block tel:w-[5.4rem]"
                 href="#"
               >
-                <img
-                  src={e.url}
-                  alt="#"
-                  title="#"
-                 
-                  className="w-full h-full "
-                />
+                <img src={e.url} alt="#" title="#" className="w-full h-full " />
               </a>
             </SwiperSlide>
           ))}
@@ -55,41 +50,49 @@ function Card() {
       </div>
 
       {/* categories */}
-      <div className="cont  mt-10 py-2 lg:px-7 tel:px-2">
+      <div className="cont  mt-10 py-2 lg:px-7 ">
         <Swiper
           freeMode={true}
           grabCursor={true}
           modules={[FreeMode]}
           className="mySwiper"
+          spaceBetween={30}
           breakpoints={{
             0: {
               slidesPerView: 1,
             },
             300: {
-              slidesPerView: 2,
+              slidesPerView: 4,
             },
             768: {
-              slidesPerView: 6,
+              slidesPerView: 4,
+            },
+            1116: {
+              slidesPerView: 4,
             },
           }}
         >
           {categories?.map((e, i) => (
             <SwiperSlide key={i}>
-              <a
-                href="#"
-                className="w-[80%] h-[78px] mt-8  py-[16px] lg:px-[24px] tel:px-[12px]  rounded-[12px] border-[1px] shadow-[0_1.17143px_14.0571px_rgba(0,0,0,0.06)] flex  items-center flex-wrap justify-center"
-              >
-                <img
-                  src={e.url}
-                  alt="#"
-                  title="#"
-                  
-                  className="w-full h-full "
-                />
-                <p className="text-base text-center text-[#333] tel:text-[13px]">
+              <div>
+                <a
+                  href="#"
+                  className="lg:w-[13rem] lg:h-[78px] mt-8  py-[10px] lg:px-[5px] tel:px-[4px]   rounded-[12px] border-[1px] shadow-[0_1.17143px_14.0571px_rgba(0,0,0,0.06)] flex items-center  justify-center lg:flex-row tel:justify-center tel:flex-col tel:width-[4.5rem] tel:h-[65px]"
+                >
+                  <img
+                    src={e.url}
+                    alt="#"
+                    title="#"
+                    className="block lg:mr-2 tel:mr-0"
+                  />
+                  <p className="text-base text-center text-[#333] tel:hidden lg:block  inline break-words">
+                    {e.title}
+                  </p>
+                </a>
+                <p className="text-center tel:text-[11px] lg:hidden tel:block">
                   {e.title}
                 </p>
-              </a>
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>
@@ -106,6 +109,7 @@ function Card() {
           modules={[FreeMode]}
           className="mySwiper"
           scrollbar={{ draggable: true }}
+          spaceBetween={50}
           breakpoints={{
             0: {
               slidesPerView: 1,
@@ -123,21 +127,18 @@ function Card() {
         >
           {phones?.map((e, i) => (
             <SwiperSlide key={i}>
-              <div className=" w-[190px] h-[430px]  mt-[30px] pt-[5px]  mb-[20px] flex  flex-col justify-start items-center hover:border-3 hover:border-[#ededed] hover:rounded-md hover:shadow-xl transition duration-150 ease-out hover:ease-in ">
+              <div className=" w-[238px] h-full  mt-[30px] pt-[5px] py-4  mb-[20px] flex  flex-col justify-start items-center hover:border-3 hover:border-[#ededed] hover:rounded-md hover:shadow-xl transition duration-150 ease-out hover:ease-in text-[15px]">
                 <span className="text-[#fbc100] bg-[#333] rounded text-sm py-1 px-1  relative right-16 top-2">
                   Зўр нарх
                 </span>
                 <a href="./index.html" className=" mb-[26px]">
-                  <img
-                    src={e.url}
-                   
-                    alt="#"
-                    title="phone"
-                  />
+                  <img src={e.url} alt="#" title="phone" className="w-[80%]" />
                 </a>
                 <div className="flex flex-col justify-center items-start space-y-2">
                   <a href="./index.html block w-[206px] h-[40px] ">
-                    <p className=" color-[#373f41]  mx-3 ">{e.title}</p>
+                    <p className=" color-[#373f41]  mx-3 tel:text-sm ">
+                      {e.title}
+                    </p>
                   </a>
                   <a href="./index.html">
                     <strong className="mx-3 my-[10px] block">{e.price}</strong>
@@ -176,7 +177,6 @@ function Card() {
                       src="https://texnomart.uz/_nuxt/img/like-default.103ba85.svg"
                       className="h-[30px] ml-2 "
                       alt="default"
-                     
                     />
                   </div>
                 </div>
